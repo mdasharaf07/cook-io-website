@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved recipes - Cook.io</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+
+
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+    <!-- Material Icon -->
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    
+
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header class="header" data-header>
+        <a href="/" class="logo">
+            <img src="./assets/images/logo-light.svg" alt="cook.io" width="156px" height="32" class="logo-light">
+            <img src="./assets/images/logo-dark.svg" alt="cook.io" width="156px" height="32" class="logo-dark">
+        </a>
+
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li>
+                    <a href="index.html" class="navbar-link title-small has-state ">
+                        Home
+                    </a>
+                <li>
+                    <a href="saved-recipes.html" class="navbar-link title-small has-state ">
+                        Recipes
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme" data-theme-btn>
+            
+        <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+        <span class="material-symbols-outlined dark-icon" aria-hidden="false">dark_mode</span>
+
+        </button>
+        
+        <a href="./saved-recipes.html" class="btn btn-primary has-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">book</span>
+            <span class="span">Saved Recipes</span>
+        </a>
+
+
+
+
+
+
+    </header>
+
+    <!-- Mobile nav -->
+
+
+    <nav class="mobile-nav" aria-label="=primary">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="./recipes.html" class="nav-link" >
+                <span class="item-icon">
+                    <span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
+                </span>
+                <span class="label-medium">Recipes </span>
+                
+                
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link" >
+                <span class="item-icon">
+                    <span class="material-symbols-outlined" >home</span>
+                </span>
+                <span class="label-medium">Home</span>
+                
+                
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./saved-recipes.html" class="nav-link" aria-current="true">
+                <span class="item-icon">
+                    <span class="material-symbols-outlined" aria-hidden="true">book</span>
+                </span>
+                <span class="label-medium">Saved</span>
+                
+                
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- main -->
+
+   <main>
+    <article class="article container saved-recipe-page" data-saved-recipe-container>
+        <h2 class="headline-small section-title">All Saved Recipes</h2>
+    </article>
+   </main>
+
+
+   
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <p class="copyright body-medium">Copyright &copy; cook.io-recipehub</p>
+
+
+        <a href="/" class="logo">
+            <img src="./assets/images/logo-light.svg" alt="cook.io" class="logo-light" width="156px" height="32">
+
+
+            <img src="./assets/images/logo-dark.svg" alt="cook.io" class="logo-dark" width="156px" height="32">
+        </a>
+
+        <a href="https://www.edaman.com/" target="_blank" class="edaman">
+            <img src="./assets/images/edamam.svg" alt="free recipe api" width="200" height="40" loading="lazy">
+        </a>
+    </footer>
+
+
+    <!-- <div class="snackbar-container">
+        <div class="snackbar">
+            
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- theme -->
+    <script src="./assets/js/theme.js"></script>
+
+    <!-- Custom Js -->
+    <script src="./assets/js/global.js" type="module"></script>
+    <script src="./assets/js/saved_recipes.js" type="module"></script>
+    
+</body>
+</html>

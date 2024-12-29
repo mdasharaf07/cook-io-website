@@ -1,0 +1,640 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cook.io - Cooking made easy</title>
+        <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+
+    
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+    <!-- Material Icon -->
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+
+        <!-- Custom Style Sheet -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+        
+
+    </head>
+    <body>
+
+        <!-- Header -->
+
+        <header class="header" data-header>
+            <a href="/" class="logo">
+                <img src="./assets/images/logo-light.svg" alt="cook.io" width="156px" height="32" class="logo-light">
+                <img src="./assets/images/logo-dark.svg" alt="cook.io" width="156px" height="32" class="logo-dark">
+            </a>
+
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li>
+                        <a href="/" class="navbar-link title-small has-state active">
+                            Home
+                        </a>
+                    <li>
+                        <a href="./recipes.html" class="navbar-link title-small has-state ">
+                            Recipes
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme" data-theme-btn>
+                
+            <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+            <span class="material-symbols-outlined dark-icon" aria-hidden="false">dark_mode</span>
+
+            </button>
+            
+            <a href="./saved-recipes.html" class="btn btn-primary has-icon">
+                <span class="material-symbols-outlined" aria-hidden="true">book</span>
+                <span class="span">Saved Recipes</span>
+            </a>
+
+
+
+
+
+
+        </header>
+
+        <!-- Mobile nav -->
+
+
+        <nav class="mobile-nav" aria-label="=primary">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="./recipes.html" class="nav-link">
+                    <span class="item-icon">
+                        <span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
+                    </span>
+                    <span class="label-medium">Recipes </span>
+                    
+                    
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="true">
+                    <span class="item-icon">
+                        <span class="material-symbols-outlined" aria-hidden="true">home</span>
+                    </span>
+                    <span class="label-medium">Home</span>
+                    
+                    
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./saved-recipes.html" class="nav-link">
+                    <span class="item-icon">
+                        <span class="material-symbols-outlined" aria-hidden="true">book</span>
+                    </span>
+                    <span class="label-medium">Saved</span>
+                    
+                    
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+
+
+
+
+        <main>
+            <article>
+
+                <!-- Hero -->
+
+                <section class="hero" aria-label="banner">
+                    <div class="banner-card">
+                        <h1 class="display-large">Your desired dish?</h1>
+
+                        <div class="search-wrapper" data-search-form>
+                            <span class="material-symbols-outlined leading-icon" aria-hidden="true">local_dining</span>
+
+                            <input type="search" name="search" aria-label="search recipes" id="" class="search-field body-medium" placeholder="Search recipes ..." data-search-field>
+
+                            <button class="search-submit" aria-label="Submit" data-search-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                            </button>
+
+                        </div>
+
+                        <p class="label-medium">
+                            Search any recipe e.g: burger, pizza, sandwich, toast.
+                        </p>
+                    </div>
+
+                </section>
+
+
+                <!-- Tab -->
+                <section class="section tab">
+                    
+                        <div class="container">
+
+
+                            <div class="tab-list" data-tab-list role="tablist" aria-label="Meal type">
+        
+                                <button class="tab-btn title-small " role="tab" id="tab-1" tabindex="0" aria-controls="panel-1" aria-selected="true" data-tab-btn>
+                                    Breakfast
+                                </button>
+                                <button class="tab-btn title-small " role="tab" id="tab-2" tabindex="-1" aria-controls="panel-2" aria-selected="false" data-tab-btn>
+                                    Lunch
+                                </button>
+                                <button class="tab-btn title-small " role="tab" id="tab-3" tabindex="-1" aria-controls="panel-3" aria-selected="false" data-tab-btn>
+                                    Dinner
+                                </button>
+                                <button class="tab-btn title-small " role="tab" id="tab-4" tabindex="-1" aria-controls="panel-4" aria-selected="false" data-tab-btn>
+                                    Snack
+                                </button>
+                                <button class="tab-btn title-small " role="tab" id="tab-5" tabindex="-1" aria-controls="panel-5" aria-selected="false" data-tab-btn>
+                                Teatime
+                                </button>
+                            </div>
+
+
+                            <div class="tab-panel" id="panel-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0" data-tab-panel>
+
+
+
+
+                            </div>
+
+
+                            <div class="tab-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0" data-tab-panel hidden>Lunch</div>
+
+                            <div class="tab-panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0" data-tab-panel hidden>Dinner</div>
+
+                            <div class="tab-panel" id="panel-4" role="tabpanel" aria-labelledby="tab-4" tabindex="0" data-tab-panel hidden>Snack</div>
+
+                            <div class="tab-panel" id="panel-5" role="tabpanel" aria-labelledby="tab-5" tabindex="0" data-tab-panel hidden>Teatime</div>
+
+
+                            
+
+
+
+                    </div>
+                
+        
+                </section>
+
+
+
+                <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section>
+
+                    <div class="container">
+                        <h2 class="section-title headline-small" id="slider-label-1">Latest Asian Recipes</h2>
+                    </div>
+
+                    <div class="slider">
+                        <ul class="slider-wrapper" data-slider-wrapper>
+
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                      
+
+                            
+
+                        </ul>
+                    </div>
+
+                </section>
+                <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section>
+
+                    <div class="container">
+                        <h2 class="section-title headline-small" id="slider-label-1">Latest French Recipes</h2>
+                    </div>
+
+                    <div class="slider">
+                        <ul class="slider-wrapper" data-slider-wrapper>
+
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="slider-item">
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./assets/images/recipe.jpg" alt="Recipe name" loading="lazy" height="200" width="200" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./detail.html" class="card-link">Recipe name</a>
+                                        </h3>
+
+                                        <div class="meta-wrapper">
+                                            <div class="meta-item">
+                                                <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+
+                                                <span class="label-medium">2 minutes</span>
+                                            </div>
+                                            <button class="icon-btn has-state removed" aria-label="Add to saved recipes">
+
+                                                <span class="material-symbols-outlined bookmark-add" aria-hidden="true">bookmark_add</span>
+                                                <span class="material-symbols-outlined bookmark" aria-hidden="true">bookmark</span>
+
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                      
+
+
+                            
+
+                        </ul>
+                    </div>
+
+                </section>
+
+
+
+                <!-- Tags -->
+
+                <section class="section tag" aria-labelledby="tag-label">
+                    <div class="container">
+
+                        <h2 class="section-title display-small" id="tag-label">
+                        Choose your health preference</h2>
+                        <p class="body-medium section-text">
+                            Choosing your health preference is an important step towards achieving a healthier lifestyle.
+                        </p>
+                        <div class="tag-list">
+                            <a href="./recipes.html?health=" class="badge-btn body-medium">
+                                Wheat-Free
+                            </a>
+                            <a href="./recipes.html?health=vegetarian" class="badge-btn body-medium">
+                                Vegetarian
+                            </a>
+                            <a href="./recipes.html?health=vegan" class="badge-btn body-medium">
+                                Vegan
+                            </a>
+                            <a href="./recipes.html?health=tree-nut-free" class="badge-btn body-medium">
+                                Tree-Nut-Free
+                            </a>
+                            <a href="./recipes.html?health=sulfite-free" class="badge-btn body-medium">
+                                Sulfite-Free
+                            </a>
+                            <a href="./recipes.html?health=sugar-conscious" class="badge-btn body-medium">
+                                Sugar-Conscious
+                            </a>
+                            <a href="./recipes.html?health=soy-free" class="badge-btn body-medium">
+                                Soy-Free
+                            </a>
+                            <a href="./recipes.html?health=shellfish-free" class="badge-btn body-medium">
+                                Shellfish-Free
+                            </a>
+                            <a href="./recipes.html?health=sesame-free" class="badge-btn body-medium">
+                                Sesame-Free
+                            </a>
+                            <a href="./recipes.html?health=red-meat-free" class="badge-btn body-medium">
+                                Red-Meat-Free
+                            </a>
+                            <a href="./recipes.html?health=pork-free" class="badge-btn body-medium">
+                                Pork-Free
+                            </a>
+                            <a href="./recipes.html?health=pecatarian" class="badge-btn body-medium">
+                                Pescatarian
+                            </a>
+                            <a href="./recipes.html?health=peanut-free" class="badge-btn body-medium">
+                                Peanut-Free
+                            </a>
+                            <a href="./recipes.html?health=paleo" class="badge-btn body-medium">
+                                Paleo
+                            </a>
+                            <a href="./recipes.html?health=No-oil-added" class="badge-btn body-medium">
+                                No oil added
+                            </a>
+                            <a href="./recipes.html?health=mustard-free" class="badge-btn body-medium">
+                                Mustard-Free
+                            </a>
+                            <a href="./recipes.html?health=mollusk-free" class="badge-btn body-medium">
+                                Mollusk-Free
+                            </a>
+                            <a href="./recipes.html?health=Mediterranean" class="badge-btn body-medium">
+                                Mediterranean
+                            </a>
+                            <a href="./recipes.html?health=lupine-free" class="badge-btn body-medium">
+                                Lupine-Free
+                            </a>
+                            <a href="./recipes.html?health=low-sugar" class="badge-btn body-medium">
+                                Low Sugar
+                            </a>
+                            <a href="./recipes.html?health=low-potassium" class="badge-btn body-medium">
+                                Low Potassium
+                            </a>
+                            <a href="./recipes.html?health=kosher" class="badge-btn body-medium">
+                                Kosher
+                            </a>
+                            <a href="./recipes.html?health=kidney-friendly" class="badge-btn body-medium">
+                                Kidney-Friendly
+                            </a>
+                            <a href="./recipes.html?health=keto-friendly" class="badge-btn body-medium">
+                                Keto-Friendly
+                            </a>
+                            <a href="./recipes.html?health=immuno-supportive" class="badge-btn body-medium">
+                                Immuno-Supportive
+                            </a>
+                            <a href="./recipes.html?health=gluten-free" class="badge-btn body-medium">
+                                Gluten-Free
+                            </a>
+                            <a href="./recipes.html?health=fodmap-free" class="badge-btn body-medium">
+                                FODMAP-Free
+                            </a>
+                            <a href="./recipes.html?health=fish-free" class="badge-btn body-medium">
+                                Fish-Free
+                            </a>
+                            <a href="./recipes.html?health=egg-free" class="badge-btn body-medium">
+                                Egg-Free
+                            </a>
+                            <a href="./recipes.html?health= DASH" class="badge-btn body-medium">
+                                DASH
+                            </a>
+                            <a href="./recipes.html?health=dairy-free" class="badge-btn body-medium">
+                                Dairy-Free
+                            </a>
+                            <a href="./recipes.html?health=crustacean-free" class="badge-btn body-medium">
+                                Crustcean-Free
+                            </a>
+                            <a href="./recipes.html?health=celery-free" class="badge-btn body-medium">
+                                Celery-Free
+                            </a>
+                            <a href="./recipes.html?health=alcohol-free" class="badge-btn body-medium">
+                                Alcohol-Free
+                            </a>
+                            <a href="./recipes.html?health=alcohol-cocktail" class="badge-btn body-medium">
+                                Alcohol-Cocktail
+                        
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+            </article>
+
+        </main>
+
+
+
+
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <p class="copyright body-medium">Copyright &copy; cook.io-recipehub</p>
+
+
+            <a href="/" class="logo">
+                <img src="./assets/images/logo-light.svg" alt="cook.io" class="logo-light" width="156px" height="32">
+
+
+                <img src="./assets/images/logo-dark.svg" alt="cook.io" class="logo-dark" width="156px" height="32">
+            </a>
+
+            <a href="https://www.edaman.com/" target="_blank" class="edaman">
+                <img src="./assets/images/edamam.svg" alt="free recipe api" width="200" height="40" loading="lazy">
+            </a>
+        </footer>
+
+
+        <!-- <div class="snackbar-container">
+            <div class="snackbar">
+                
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- theme -->
+        <script src="./assets/js/theme.js"></script>
+
+        <!-- Custom Js -->
+        <script src="./assets/js/global.js" type="module"></script>
+        <script src="./assets/js/home.js" type="module"></script>
+        
+    </body>
+    </html>

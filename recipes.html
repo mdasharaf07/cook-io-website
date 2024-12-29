@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes - Cook.io</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+
+
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+    <!-- Material Icon -->
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    
+
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header class="header" data-header>
+        <a href="/" class="logo">
+            <img src="./assets/images/logo-light.svg" alt="cook.io" width="156px" height="32" class="logo-light">
+            <img src="./assets/images/logo-dark.svg" alt="cook.io" width="156px" height="32" class="logo-dark">
+        </a>
+
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li>
+                    <a href="index.html" class="navbar-link title-small has-state ">
+                        Home
+                    </a>
+                <li>
+                    <a href="#" class="navbar-link title-small has-state active ">
+                        Recipes
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme" data-theme-btn>
+            
+        <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+        <span class="material-symbols-outlined dark-icon" aria-hidden="false">dark_mode</span>
+
+        </button>
+        
+        <a href="./saved-recipes.html" class="btn btn-primary has-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">book</span>
+            <span class="span">Saved Recipes</span>
+        </a>
+
+
+
+
+
+
+    </header>
+
+    <!-- Mobile nav -->
+
+
+    <nav class="mobile-nav" aria-label="=primary">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link" aria-current="true">
+                <span class="item-icon">
+                    <span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
+                </span>
+                <span class="label-medium">Recipes </span>
+                
+                
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link" >
+                <span class="item-icon">
+                    <span class="material-symbols-outlined" >home</span>
+                </span>
+                <span class="label-medium">Home</span>
+                
+                
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./saved-recipes.html" class="nav-link">
+                <span class="item-icon">
+                    <span class="material-symbols-outlined" aria-hidden="true">book</span>
+                </span>
+                <span class="label-medium">Saved</span>
+                
+                
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- main -->
+
+
+    <main>
+        <article class="article recipe-page">
+
+            <!-- Filter Bar -->
+            <div class="filter-bar" data-filter-bar>
+                <div class="title-wrapper">
+                    <span class="material-symbols-outlined" aria-hidden="true">filter_list</span>
+
+                    <p class="title-medium">Filters</p>
+
+                    <button class="icon-btn close-btn has-state" aria-label="Close filter bar" data-filter-toggler>
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                    </button>
+                    
+                </div>
+
+
+                <!-- filter-content -->
+
+                <div class="filter-content">
+                    <div class="search-wrapper">
+                        <div class="input-outlined">
+                            <label for="search" class="body-large label">Search</label>
+
+                            <input type="search" name="search" id="search" placeholder="Search recipes..." class="input-field body-large">
+                        </div>
+                    </div>
+                
+
+                   <!-- accordion -->
+
+                        <div class="accordion-container" data-accordion>
+                            <button class="accordion-btn has-state" aria-controls="cook-time" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">timer</span>
+
+                                <p class="label-large">Cooking Time</p>
+
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  Cook time-->
+                        <div class="accordion-content"   id="cook-time">
+                            <div class="accordion-overflow" data-filter-bar="time">
+
+                                <label class="filter-chip label-large">
+                                    &lt; 5 minutes
+                                    <input type="radio" name="cook-time" value="5" aria-label="5 or less minutes" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    5 - 10 minutes
+                                    <input type="radio" name="cook-time" value="5-10" aria-label="5 to 10 minutes" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    10 - 20 minutes
+                                    <input type="radio" name="cook-time" value="10-20" aria-label="10 to 20 minutes" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    20 - 30 minutes
+                                    <input type="radio" name="cook-time" value="20 - 30" aria-label="20 to 30 minutes" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    30 - 40 minutes
+                                    <input type="radio" name="cook-time" value="30 - 40" aria-label="30 - 40 minutes" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    40 - 50 minutes
+                                    <input type="radio" name="cook-time" value="40-50" aria-label="40 to 50 minutes" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    50 - 60 minutes
+                                    <input type="radio" name="cook-time" value="50-60" aria-label="50 to 60 minutes" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    &gt; 1 hours
+                                    <input type="radio" name="cook-time" value="60+" aria-label="1 or more hours" class="checkbox">
+                                </label>
+
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+
+
+                        <div class="accordion-container" data-accordion>
+                            <button class="accordion-btn has-state" aria-controls="ingr" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">nutrition</span>
+
+                                <p class="label-large">Ingredients</p>
+
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  ingredient-->
+                        <div class="accordion-content"   id="ingr">
+                            <div class="accordion-overflow" data-filter="ingr">
+
+                                <label class="filter-chip label-large">
+                                    &lt; 5 ingredients
+                                    <input type="radio" name="ingr" value="5" aria-label="5 or less ingredients" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    5 - 10 ingredients
+                                    <input type="radio" name="ingr" value="5-10" aria-label="5 to 10 ingredients" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    10 - 20 ingredients
+                                    <input type="radio" name="ingr" value="10-20" aria-label="10 to 20 ingredients" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    20 - 30 ingredients
+                                    <input type="radio" name="ingr" value="20 - 30" aria-label="20 to 30 ingredients" class="checkbox">
+                                </label>
+                                
+                                <label class="filter-chip label-large">
+                                    &gt; 30 ingredients
+                                    <input type="radio" name="ingr" value="30+" aria-label="30 or more ingredients
+                                    " class="checkbox">
+                                </label>
+
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+
+
+                        <div class="accordion-container" data-accordion>
+                            <button class="accordion-btn has-state" aria-controls="calories" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">ulna_radius_alt</span>
+
+                                <p class="label-large">Calories</p>
+
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  calories-->
+                        <div class="accordion-content"   id="calories">
+                            <div class="accordion-overflow" data-filter="calories">
+
+                                <label class="filter-chip label-large">
+                                    &lt; 50 calories
+                                    <input type="radio" name="calories" value="50" aria-label="50 or less calories" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    50 - 100 calories
+                                    <input type="radio" name="calories" value="50-100" aria-label="50 to 100 calories" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    100 - 200 calories
+                                    <input type="radio" name="calories" value="100-200" aria-label="100 to 200 calories" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    200 - 300 calories
+                                    <input type="radio" name="calories" value="200 - 300" aria-label="200 to 300 calories" class="checkbox">
+                                </label>
+                                <label class="filter-chip label-large">
+                                    400 - 500 calories
+                                    <input type="radio" name="calories" value="400 - 500" aria-label="400 to 500 calories" class="checkbox">
+                                </label>
+                                
+                                <label class="filter-chip label-large">
+                                    &gt; 500 calories
+                                    <input type="radio" name="calories" value="500+" aria-label="50 or more calories
+                                    " class="checkbox">
+                                </label>
+
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+                        <div class="accordion-container" data-accordion>
+                            <button class="accordion-btn has-state" aria-controls="diet" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">spa</span>
+
+                                <p class="label-large">Diet</p>
+
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  diet-->
+                        <div class="accordion-content"   id="diet">
+                            <div class="accordion-overflow" data-filter="diet">
+
+                                <label  class="filter-chip label-large">
+                                    Balanced
+
+                                    <input type="checkbox" name="Balanced" class="checkbox" value="balanced" aria-label="Balanced">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    High Fiber
+
+                                    <input type="checkbox" name="High Fiber" class="checkbox" value="high-fiber" aria-label="High Fiber">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    High Protein
+
+                                    <input type="checkbox" name="High Protein" class="checkbox" value="high-protein" aria-label="High Protein" >
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Low Carb
+
+                                    <input type="checkbox" name="Low Carb" class="checkbox" value="low-carb" aria-label="Low Carb">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Low Fat
+
+                                    <input type="checkbox" name="Low Fat" class="checkbox" value="low-fat" aria-label="Low Fat">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Low Sodium
+
+                                    <input type="checkbox" name="Low Sodium" class="checkbox" value="low-sodium" aria-label="Low Sodium">
+                                </label>
+                                
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+
+                        <div class="accordion-container" data-accordion>
+                            <button class="accordion-btn has-state" aria-controls="health" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span>
+
+                                <p class="label-large">Health</p>
+
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  health-->
+                        <div class="accordion-content"   id="health">
+                            <div class="accordion-overflow" data-filter="health">
+
+                                <label  class="filter-chip label-large">
+                                    Balanced
+
+                                    <input type="checkbox" name="Balanced" class="checkbox" value="balanced" aria-label="Balanced">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Alcohol Cocktail
+
+                                    <input type="checkbox" name="Alcohol Cocktail" class="checkbox" value="alcohol-cocktail" aria-label="Alcohol Cocktail">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Alcohol Free
+
+                                    <input type="checkbox" name="Alcohol Free" class="checkbox" value="alcohol-free" aria-label="Alcohol Free" >
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Celery Free
+
+                                    <input type="checkbox" name="Celery Free" class="checkbox" value="celery-free" aria-label="Celery Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Crustcean Free
+
+                                    <input type="checkbox" name="Crustcean Free" class="checkbox" value="crustacean-free" aria-label="Crustcean Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    DASH
+
+                                    <input type="checkbox" name="DASH" class="checkbox" value="DASH" aria-label="DASH">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Egg Free
+
+                                    <input type="checkbox" name="Egg Free" class="checkbox" value="egg-free" aria-label="Egg Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Fish Free
+
+                                    <input type="checkbox" name="Fish Free" class="checkbox" value="fish-free" aria-label="Fish Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Dairy Free
+
+                                    <input type="checkbox" name="Dairy Free" class="checkbox" value="dairy-free" aria-label="Dairy Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    FODMAP Free
+
+                                    <input type="checkbox" name="FODMAP Free" class="checkbox" value="fodmap-free" aria-label="FODMAP Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Gluten Free
+
+                                    <input type="checkbox" name="Gluten Free" class="checkbox" value="gluten-free" aria-label="Gluten Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Immuno Supportive
+
+                                    <input type="checkbox" name="Immuno Supportive" class="checkbox" value="immuno-supportive" aria-label="Immuno Supportive">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Keto Friendly
+
+                                    <input type="checkbox" name="Keto Friendly" class="checkbox" value="keto-friendly" aria-label="Keto Friendly">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Kidney Friendly
+
+                                    <input type="checkbox" name="Kidney Friendly" class="checkbox" value="kidney-friendly" aria-label="Kidney Friendly">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Kosher
+
+                                    <input type="checkbox" name="Kosher" class="checkbox" value="Kosher" aria-label="Kosher">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Low Fat Abs
+
+                                    <input type="checkbox" name="Low Fat Abs" class="checkbox" value="low-fat-abs" aria-label="Low Fat Abs">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Low Potassium
+
+                                    <input type="checkbox" name="Low Potassium" class="checkbox" value="low-potassium" aria-label="Low Potassium">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Low Sugar
+
+                                    <input type="checkbox" name="Low Sugar" class="checkbox" value="low-sugar" aria-label="Low Sugar">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Lupine Free
+
+                                    <input type="checkbox" name="Lupine Free" class="checkbox" value="lupine-free
+                                    " aria-label="Lupine Free">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Mediterranean
+
+                                    <input type="checkbox" name="Mediterranean" class="checkbox" value="Mediterranean
+                                    " aria-label="Mediterranean">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Mollusk Free
+
+                                    <input type="checkbox" name="Mollusk Free" class="checkbox" value="mollusk-free
+                                    " aria-label="Mollusk Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Mustard Free
+
+                                    <input type="checkbox" name="Mustard Free" class="checkbox" value="mustard-free
+                                    " aria-label="Mustard Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    No oil added
+
+                                    <input type="checkbox" name="No oil added" class="checkbox" value="no-oil-added" aria-label="No oil added">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Paleo
+
+                                    <input type="checkbox" name="Paleo" class="checkbox" value="Paleo" aria-label="Paleo">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Peanut Free
+
+                                    <input type="checkbox" name="Peanut Free" class="checkbox" value="peanut-free" aria-label="Peanut Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Pescatarian
+
+                                    <input type="checkbox" name="Pescatarian" class="checkbox" value="pescatarian" aria-label="Pescatarian">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Pork Free
+
+                                    <input type="checkbox" name="Pork Free" class="checkbox" value="pork-free" aria-label="Pork Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Red Meat Free
+
+                                    <input type="checkbox" name="Red Meat Free" class="checkbox" value="red-meat-free" aria-label="Red Meat Free">
+                                </label>
+                                
+
+                                <label  class="filter-chip label-large">
+                                    Sesame Free
+                                    <input type="checkbox" name="Sesame Free" class="checkbox" value="sesame-free" aria-label="Sesame Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Shellfish-Free
+                                    <input type="checkbox" name="Shellfish-Free" class="checkbox" value="shellfish-free" aria-label="Shellfish-Free">
+                                </label>
+
+                                <label  class="filter-chip label-large">
+                                    Soy Free
+                                    <input type="checkbox" name="Soy Free" class="checkbox" value="soy-free" aria-label="Soy Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Sugar Conscious
+                                    <input type="checkbox" name="Sugar Conscious" class="checkbox" value="sugar-conscious" aria-label="Sugar Conscious">
+                                </label>
+
+
+                                <label  class="filter-chip label-large">
+                                    Sulfite Free
+                                    <input type="checkbox" name="Sulfite Free" class="checkbox" value="sulfite-free" aria-label="Sulfite Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Tree Nut Free
+                                    <input type="checkbox" name="Tree Nut Free" class="checkbox" value="tree-nut-free" aria-label="Tree Nut Free">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Vegan
+                                    <input type="checkbox" name="Vegan" class="checkbox" value="Vegan" aria-label="Vegan">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Vegetarian
+                                    <input type="checkbox" name="Vegetarian" class="checkbox" value="vegetarian" aria-label="Vegetarian">
+                                </label>
+                                
+                                <label  class="filter-chip label-large">
+                                    Wheat Free
+                                    <input type="checkbox" name="Wheat Free" class="checkbox" value="wheat-free" aria-label="Wheat Free">
+                                </label>
+                                
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+                        <div class="accordion-container" data-accordion>
+                            <button class="accordion-btn has-state" aria-controls="meal" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">restaurant</span>
+
+                                <p class="label-large">Meal</p>
+
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  ingredient-->
+                        <div class="accordion-content"   id="meal">
+                            <div class="accordion-overflow" data-filter="mealType">
+
+                                <label  class="filter-chip label-large">
+                                    Breakfast
+
+                                    <input type="checkbox" name="Breakfast" class="checkbox" value="breakfast" aria-label="Breakfast">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Dinner
+
+                                    <input type="checkbox" name="Dinner" class="checkbox" value="dinner" aria-label="Dinner">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Lunch
+
+                                    <input type="checkbox" name="Lunch" class="checkbox" value="lunch" aria-label="Lunch" >
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Snack
+
+                                    <input type="checkbox" name="Snack" class="checkbox" value="snack" aria-label="Snack">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Teatime
+
+                                    <input type="checkbox" name="Teatime" class="checkbox" value="teatime" aria-label="Teatime">
+                                </label>
+                            
+                                
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+
+                        <div class="accordion-container" data-accordion> 
+                            <button class="accordion-btn has-state" aria-controls="dish" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">fastfood</span>
+
+                                <p class="label-large">Dish</p>
+
+                                <!-- <span class="material-symbols-outlined" aria-hidden="true">fastfood</span> -->
+
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  ingredient-->
+                        <div class="accordion-content"   id="dish">
+                            <div class="accordion-overflow" data-filter="dishType">
+
+                                <label  class="filter-chip label-large">
+                                    Biscuits and cookies
+
+                                    <input type="checkbox" name="Biscuits and cookies" class="checkbox" value="biscuits and cookies" aria-label="Biscuits and cookies">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Bread
+
+                                    <input type="checkbox" name="Bread" class="checkbox" value="bread" aria-label="Bread">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Cereals
+
+                                    <input type="checkbox" name="Cereals" class="checkbox" value="cereals" aria-label="Cereals" >
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Condiments and sauces
+
+                                    <input type="checkbox" name="Condiments and sauces" class="checkbox" value="condiments and sauces" aria-label="Condiments and sauces">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Desserts
+
+                                    <input type="checkbox" name="Desserts" class="checkbox" value="desserts" aria-label="Desserts">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Drinks
+
+                                    <input type="checkbox" name="Drinks" class="checkbox" value="drinks" aria-label="Drinks">
+                                </label>
+                            
+                                
+                                <label  class="filter-chip label-large">
+                                    Main course
+
+                                    <input type="checkbox" name="Main course" class="checkbox" value="main course" aria-label="Main course">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Pancake
+
+                                    <input type="checkbox" name="Pancake" class="checkbox" value="pancake" aria-label="Pancake">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Preps
+
+                                    <input type="checkbox" name="Preps" class="checkbox" value="preps" aria-label="Preps">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Preserve
+
+                                    <input type="checkbox" name="Preserve" class="checkbox" value="preserve" aria-label="Preserve">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Salad
+
+                                    <input type="checkbox" name="Salad" class="checkbox" value="salad" aria-label="Salad">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Sandwiches
+
+                                    <input type="checkbox" name="Sandwiches" class="checkbox" value="sandwiches" aria-label="Sandwiches">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Side dish
+
+                                    <input type="checkbox" name="Side dish" class="checkbox" value="side dish" aria-label="Side dish">
+                                </label>
+                            
+                            
+                                <label  class="filter-chip label-large">
+                                    Soup
+
+                                    <input type="checkbox" name="Soup" class="checkbox" value="soup" aria-label="Soup">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Starter
+
+                                    <input type="checkbox" name="Starter" class="checkbox" value="starter" aria-label="Starter">
+                                </label>
+                            
+                                
+                                <label  class="filter-chip label-large">
+                                    Sweets
+
+                                    <input type="checkbox" name="Sweets" class="checkbox" value="sweets" aria-label="Sweets">
+                                </label>
+                            
+                                
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+
+
+                        <div class="accordion-container" data-accordion>
+                            <button class="accordion-btn has-state" aria-controls="cuisine" aria-expanded="false" data-accordion-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">public</span>
+
+                                <p class="label-large">Cuisine</p>
+
+                                <!-- <span class="material-symbols-outlined trailing-icon" aria-hidden="true">fastfood</span> -->
+                                <span class="material-symbols-outlined trailing-icon" aria-hidden="true">expand_more</span>
+
+                                
+
+                            </button>
+
+                            
+                            <!-- accordion Content  ingredient-->
+                        <div class="accordion-content"   id="cuisine">
+                            <div class="accordion-overflow" data-filter="cuisineType">
+
+                                <label  class="filter-chip label-large">
+                                    American
+
+                                    <input type="checkbox" name="American" class="checkbox" value="american" aria-label="American">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Asian
+
+                                    <input type="checkbox" name="Asian" class="checkbox" value="asian" aria-label="Asian">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    British
+
+                                    <input type="checkbox" name="British" class="checkbox" value="british" aria-label="British" >
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Caribbean
+
+                                    <input type="checkbox" name="Caribbean" class="checkbox" value="caribbean" aria-label="Caribbean">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Central Europe
+
+                                    <input type="checkbox" name="Central Europe" class="checkbox" value="central europe" aria-label="Central Europe">
+                                </label>
+                                <label  class="filter-chip label-large">
+                                    Chinese
+
+                                    <input type="checkbox" name="Chinese" class="checkbox" value="chinese" aria-label="Chinese">
+                                </label>
+                            
+                                
+                                <label  class="filter-chip label-large">
+                                    Eastern Europe
+
+                                    <input type="checkbox" name="Eastern Europe" class="checkbox" value="eastern europe" aria-label="Eastern Europe">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    French
+
+                                    <input type="checkbox" name="French" class="checkbox" value="french" aria-label="French">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Indian
+
+                                    <input type="checkbox" name="Indian" class="checkbox" value="indian" aria-label="Indian">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Italian
+
+                                    <input type="checkbox" name="Italian" class="checkbox" value="italian" aria-label="Italian">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Japanese
+
+                                    <input type="checkbox" name="Japanese" class="checkbox" value="japanese" aria-label="Japanese">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Kosher
+
+                                    <input type="checkbox" name="Kosher" class="checkbox" value="kosher" aria-label="Kosher">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Mediterranean
+
+                                    <input type="checkbox" name="Mediterranean" class="checkbox" value="Mediterranean" aria-label="mediterranean">
+                                </label>
+                            
+                            
+                                <label  class="filter-chip label-large">
+                                    Mexican
+
+                                    <input type="checkbox" name="Mexican" class="checkbox" value="mexican" aria-label="Mexican">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    Middle Eastern
+
+                                    <input type="checkbox" name="Middle Eastern" class="checkbox" value="middle eastern" aria-label="Middle Eastern">
+                                </label>
+                            
+                                
+                                <label  class="filter-chip label-large">
+                                    Nordic
+
+                                    <input type="checkbox" name="Nordic" class="checkbox" value="nordic" aria-label="Nordic">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    South American
+
+                                    <input type="checkbox" name="South American" class="checkbox" value="south american" aria-label="South American">
+                                </label>
+                            
+                                <label  class="filter-chip label-large">
+                                    South East Asian
+
+                                    <input type="checkbox" name="South East Asian" class="checkbox" value="South East Asian" aria-label="south east asian">
+                                </label>
+                            
+                                
+                            </div>
+                        </div>
+
+
+
+
+                        </div>
+
+
+                </div>
+
+
+                <!-- Filter actions -->
+
+                <div class="filter-actions">
+                    <button class="btn btn-secondary label-large has-state" data-filter-clear>
+                        Clear
+                    </button>
+                    <button class="btn btn-primary label-large" data-filter-submit>
+                       Apply
+                    </button>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+            <div class="overlay" data-overlay data-filter-toggler></div>
+
+
+
+            <div class="recipe-container container">
+
+                <div class="title-wrapper">
+                    <h2 class="headline-small">All Recipes</h2>
+
+                    <button class="btn btn-secondary btn-filter has-icon has-state" aria-label="Open filter bar" data-filter-toggler data-filter-btn>
+                        <span class="material-symbols-outlined" aria-hidden="true">filter_list</span>
+
+
+                        <div class="wrapper">
+                            <span class="label-large">Filters</span>
+                        </div>
+
+                        <div class="badge label-small" data-filter-count>9</div>
+
+                    </button>
+
+
+                </div>
+
+
+
+                <div class ="grid-list" data-grid-list></div>
+
+
+                <div class="body-medium grid-list" data-load-more>
+                   
+                </div>
+
+            </div>
+
+
+
+        </article>
+    </main>
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <p class="copyright body-medium">Copyright &copy; cook.io-recipehub</p>
+
+
+        <a href="/" class="logo">
+            <img src="./assets/images/logo-light.svg" alt="cook.io" class="logo-light" width="156px" height="32">
+
+
+            <img src="./assets/images/logo-dark.svg" alt="cook.io" class="logo-dark" width="156px" height="32">
+        </a>
+
+        <a href="https://www.edaman.com/" target="_blank" class="edaman">
+            <img src="./assets/images/edamam.svg" alt="free recipe api" width="200" height="40" loading="lazy">
+        </a>
+    </footer>
+
+
+    <!-- <div class="snackbar-container">
+        <div class="snackbar">
+            
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- theme -->
+    <script src="./assets/js/theme.js"></script>
+
+    <!-- Custom Js -->
+    <script src="./assets/js/global.js" type="module"></script>
+    <script src="./assets/js/recipes.js" type="module"></script>
+    
+</body>
+</html>
